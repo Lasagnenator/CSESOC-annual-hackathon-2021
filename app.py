@@ -35,10 +35,11 @@ def call():
 
     return str(response)
 
+@app.route("/", methods=['GET'])
 @app.route("/queue", methods=['GET'])
 def queue():
     "Give the question queue."
     return HTML_queue(Qqueue)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
